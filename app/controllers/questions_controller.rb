@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   end
 
   def answer
+    # We use params to access the parameters that are sent in the HTTP request
     question = params[:question]
     @answer = if question == 'I am going to work'
                 'Great!'

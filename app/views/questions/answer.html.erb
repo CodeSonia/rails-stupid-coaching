@@ -1,8 +1,12 @@
-<h2>Your question:</h2>
-<p><%= params[:question] %></p>
+<%# <h2>Your question:</h2> %>
+<blockquote class="blockquote">
+  <footer class="blockquote-footer mt-3">You: <%= params[:question] %></footer>
+</blockquote>
 
-<h2>Coach's answer:</h2>
+<%# <h2>Coach's answer:</h2> %>
+<blockquote class="blockquote">
 <%# Call the answer instance variable which handles the if statements %>
-<p><%= @answer %></p>
+  <footer class="blockquote-footer mt-3">Coach: <%= @answer %></footer>
+</blockquote>
 
-<%= link_to "Ask a new question", ask_path %>
+<%= link_to "Ask a new question", ask_path, class: "text-decoration-none" %>

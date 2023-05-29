@@ -1,4 +1,9 @@
-<form action="/answer" data-turbo="false">
-  <input type="text" name="question" placeholder="<%= @question %>">
-  <input type="submit" value="Ask!">
-</form>
+<div class="form-group">
+  <p class="text-muted">Ask your coach anything: </p>
+  <form action="/answer" data-turbo="false" class="d-flex align-items-start" >
+    <div class="input-group" >
+      <input type="text" name="question" placeholder="<%= @question %>" class="form-control">
+      <input type="submit" value="Ask!" class="btn btn-primary">
+    </div>
+  </form>
+</div>
